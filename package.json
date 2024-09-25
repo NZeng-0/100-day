@@ -32,6 +32,8 @@
     "jsdom": "^25.0.0",
     "lint-staged": "^15.2.10",
     "pnpm": "^9.9.0",
+    "sass": "^1.79.3",
+    "sass-loader": "^16.0.2",
     "simple-git-hooks": "^2.11.1",
     "taze": "^0.16.7",
     "typescript": "^5.5.4",
