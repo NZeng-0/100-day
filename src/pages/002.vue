@@ -182,7 +182,7 @@ function switchClass() {
   }
 
   100% {
-    transform: translate3d(0, 0, 0) rotate(0deg);
+    transform: translate3d(0, 0, 0) rotate(0);
   }
 }
 </style>
