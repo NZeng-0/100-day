@@ -1,3 +1,12 @@
+:root {
+  --brown: #786450;
+  --blue: #5f98cd;
+  --blue-dark: #264057;
+  --blue-light: #b2daff;
+  --drop-color: #7fc1f9;
+  --red: #ec6565;
+}
+
 html,
 body,
 #app {
@@ -8,4 +17,8 @@ body,
 
 html.dark {
   background: #121212;
+}
+
+.op-5 {
+  opacity: 0.5;
 }

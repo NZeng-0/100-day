@@ -18,6 +18,8 @@ function switchClass() {
       </div>
     </div>
   </div>
+  <TheCd to="001" class="op-5" :bt="35" />
+  <TheCd to="003" :bt="10" />
 </template>
 
 <style scoped lang="scss">

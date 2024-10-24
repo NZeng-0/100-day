@@ -12,6 +12,9 @@
       </div>
     </div>
   </div>
+
+  <TheCd to="003" class="op-5" :bt="35" />
+  <TheCd to="005" :bt="10" />
 </template>
 
 <style scoped>

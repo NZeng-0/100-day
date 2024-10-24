@@ -15,9 +15,12 @@
       </div>
     </div>
   </div>
+
+  <TheCd to="002" class="op-5" :bt="35" />
+  <TheCd to="004" :bt="10" />
 </template>
 
-<style>
+<style scoped>
 .frame {
   position: absolute;
   top: 50%;

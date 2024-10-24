@@ -15,6 +15,7 @@
       <span class="small">CSS Challenge</span>
     </div>
   </div>
+  <TheCd to="002" :bt="10" />
 </template>
 
 <style scoped>
