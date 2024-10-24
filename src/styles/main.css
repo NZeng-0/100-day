@@ -5,6 +5,12 @@
   --blue-light: #b2daff;
   --drop-color: #7fc1f9;
   --red: #ec6565;
+  --green: #37d493;
+  --gray: #444;
+  --e-width: 420px;
+  --e-w-offset: -10px;
+  --e-height: 400px;
+  --speed: 0.7s;
 }
 
 html,
@@ -21,4 +27,10 @@ html.dark {
 
 .op-5 {
   opacity: 0.5;
+  transform: scale(0.9);
+}
+
+.op-5:hover {
+  opacity: 0.7;
+  transform: scale(0.95);
 }
