@@ -15,6 +15,7 @@
     </svg>
   </div>
   <TheCd to="020" class="op-5" :bt="35" />
+  <TheCd to="022" :bt="10" />
 </template>
 
 <style scoped>
