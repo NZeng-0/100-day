@@ -8,6 +8,8 @@
       <div v-for="e in 20" :key="e" :class="`dot dot-${e}`" />
     </div>
   </div>
+  <TheCd to="029" class="op-5" :bt="35" />
+  <TheCd to="032" :bt="10" />
 </template>
 
 <style lang="scss" scoped>

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 const num = ref<number>(0)
-const animationClass = ref([])
+const animationClass = ref<string[]>([])
 
-function updateNumber(value) {
+function updateNumber(value: number) {
   num.value += value
   animationClass.value = animationClass.value.filter((e: string) => {
     return e !== 'fadeOutDown' && e !== 'fadeOutUp' && e !== 'span'
@@ -39,6 +39,8 @@ function updateNumber(value) {
       </div>
     </div>
   </div>
+  <TheCd to="031" class="op-5" :bt="35" />
+  <TheCd to="033" :bt="10" />
 </template>
 
 <style scoped lang="scss">

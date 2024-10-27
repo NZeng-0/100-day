@@ -52,6 +52,7 @@ function foo() {
     </div>
   </div>
   <TheCd to="025" class="op-5" :bt="35" />
+  <TheCd to="027" :bt="10" />
 </template>
 
 <style scoped>
