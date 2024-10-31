@@ -23,7 +23,7 @@
     </svg>
   </div>
   <TheCd to="032" class="op-5" :bt="35" />
-  <!-- <TheCd to="034" :bt="10" /> -->
+  <TheCd to="034" :bt="10" />
 </template>
 
 <style scoped lang="scss">
