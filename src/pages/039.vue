@@ -1,23 +1,20 @@
 <script setup lang="ts">
-// CLICK IT
-// $('.menu-icon').bind('click', () => {
-//   $('.menu-icon').removeClass('paused').addClass('active')
-//   $('.menu').removeClass('paused').addClass('active')
-// })
+const active = ref(false)
+const count = ref(0)
 
-// $('.menu').bind('click', () => {
-//   $('.menu-icon').removeClass('active')
-//   $('.menu').removeClass('active')
-// })
+function foo() {
+  active.value = false
+  count.value++
+}
 </script>
 
 <template>
   <div class="frame">
-    <div class="menu-icon paused">
+    <div class="menu-icon" :class="{ active, paused: !active && count < 1 }" @click="active = true">
       <div class="line-top" />
       <div class="line-bottom" />
     </div>
-    <div class="menu">
+    <div class="menu" :class="{ active }" @click="foo()">
       <ul>
         <li><span>Home</span></li>
         <li><span>Work</span></li>
