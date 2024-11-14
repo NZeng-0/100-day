@@ -1,0 +1,96 @@
+<script setup lang="ts">
+
+</script>
+
+<template>
+  <div class="frame">
+    <div class="center">
+      <div class="cube" onclick="void(0);">
+        <div class="side front" />
+        <div class="side back" />
+        <div class="side right" />
+        <div class="side left" />
+        <div class="side top" />
+        <div class="side bottom" />
+      </div>
+    </div>
+  </div>
+</template>
+
+<style lang="scss" scoped>
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  background: #e47512;
+  color: #fff;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 100px;
+  left: 100px;
+  perspective: 1000px;
+}
+
+.cube {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  transform-style: preserve-3d;
+  transform: translateZ(-100px) rotateX(70deg) rotateZ(-45deg);
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateZ(-100px) rotateX(-120deg) rotateZ(135deg);
+  }
+
+  .side {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+  }
+
+  .front {
+    transform: rotateY(0deg) translateZ(100px);
+    background: #fff;
+  }
+
+  .back {
+    transform: rotateX(180deg) translateZ(100px);
+    background: #ccc;
+  }
+
+  .right {
+    transform: rotateY(90deg) translateZ(100px);
+    background: #ddd;
+  }
+
+  .left {
+    transform: rotateY(-90deg) translateZ(100px);
+    background: #eee;
+  }
+  .top {
+    transform: rotateX(90deg) translateZ(100px);
+    background: #eee;
+  }
+
+  .bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+    background: #ddd;
+  }
+}
+</style>
