@@ -1,0 +1,132 @@
+<script setup lang="ts">
+
+</script>
+
+<template>
+  <div class="frame">
+    <div class="wave wave-back">
+      <div v-for="i in 10" :key="`back-${i}`" class="circle" />
+    </div>
+    <div class="wave wave-middle">
+      <div v-for="i in 10" :key="`middle-${i}`" class="circle" />
+    </div>
+    <div class="wave wave-front">
+      <div v-for="i in 10" :key="`front-${i}`" class="circle" />
+    </div>
+  </div>
+</template>
+
+<style lang="scss" scoped>
+$bg: #263a4d;
+$dark: #406384;
+$middle: #5d90bf;
+$light: #7eb3e6;
+
+.frame {
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  background: #263a4d;
+  color: #fff;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wave {
+  position: absolute;
+  height: 150px;
+  width: 500px;
+  left: -50px;
+  background: #fff;
+
+  .circle {
+    position: relative;
+    float: left;
+    width: 50px;
+    height: 50px;
+    top: -24px;
+    border-radius: 50%;
+
+    &:nth-child(2n + 2) {
+      top: -26px;
+    }
+  }
+}
+
+.wave-back {
+  top: 225px;
+  background: $dark;
+  animation: wave-back 4s ease-in-out alternate infinite;
+
+  .circle {
+    background: $dark;
+
+    &:nth-child(2n + 2) {
+      background: $bg;
+    }
+  }
+}
+
+.wave-middle {
+  top: 280px;
+  background: $middle;
+  animation: wave-middle 4s ease-in-out alternate infinite;
+
+  .circle {
+    background: $middle;
+
+    &:nth-child(2n + 2) {
+      background: $dark;
+    }
+  }
+}
+
+.wave-front {
+  top: 335px;
+  background: $light;
+  animation: wave-front 4s ease-in-out alternate infinite;
+
+  .circle {
+    background: $light;
+
+    &:nth-child(2n + 2) {
+      background: $middle;
+    }
+  }
+}
+
+@keyframes wave-back {
+  from {
+    transform: translate3d(-20px, 0, 0);
+  }
+  to {
+    transform: translate3d(20px, 0, 0);
+  }
+}
+
+@keyframes wave-middle {
+  from {
+    transform: translate3d(10px, 0, 0);
+  }
+  to {
+    transform: translate3d(-10px, 0, 0);
+  }
+}
+
+@keyframes wave-front {
+  from {
+    transform: translate3d(-50px, 0, 0);
+  }
+  to {
+    transform: translate3d(50px, 0, 0);
+  }
+}
+</style>
